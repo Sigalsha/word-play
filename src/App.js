@@ -1,13 +1,28 @@
 import "./App.css";
-import Button from "./components/Button";
-import Header from "./components/Header";
+import Intro from "./views/Intro";
+import SelectSubject from "./views/SelectSubject";
+import PlayGame from "./views/PlayGame";
+import CardContextProvider from "./contexts/CardContext";
+import { useState } from "react";
+import ScoreContextProvider from "./contexts/ScoreContext";
 
 function App() {
+  const [gameStage, setGameStage] = useState("intro");
+
   return (
     <div className="App">
-      <Header />
-      <p>To practice your english vocabulary, please click Start</p>
-      <Button />
+      {gameStage}
+      {gameStage === "intro" && (
+        <Intro onClick={() => setGameStage("selectSubject")} />
+      )}
+      {gameStage === "selectSubject" && (
+        <SelectSubject onClick={() => setGameStage("playGame")} />
+      )}
+      {gameStage === "playGame" && (
+        <ScoreContextProvider>
+          <PlayGame onClick={() => setGameStage("intro")} />
+        </ScoreContextProvider>
+      )}
     </div>
   );
 }

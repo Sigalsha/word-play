@@ -1,12 +1,11 @@
 import React from "react";
 
-const CardList = () => {
-  // const { cards } = useContext(CardContext);
+const CardList = ({ isSubjectCard }) => {
   return (
     <div className="card-list">
-      {/*      <ul>
+      {/*       <ul>
         {cards.map((cards) => {
-          return <Card card={card} key={card.id} />;
+          return <Card card={card} key={card.id} isSubjectCard />;
         })}
       </ul> */}
     </div>
