@@ -1,3 +1,7 @@
+import pizza from "../assets/food/pizza-slice.png";
+import computer from "../assets/computer/pc.png";
+import building from "../assets/buildings/congress.png";
+
 export const intro = {
   header: "Welcome to Word Play!",
   desc: "To practice your english vocabulary, please click Start",
@@ -9,11 +13,11 @@ export const selectSubject = {
   subjects: [
     { name: "animals", id: 1 },
     { name: "clothes", id: 2 },
-    { name: "food", id: 3 },
-    { name: "computer", id: 4 },
+    { name: "food", id: 3, img: pizza },
+    { name: "computer", id: 4, img: computer },
     { name: "personal", id: 5 },
     { name: "bathroom", id: 6 },
-    { name: "buildings", id: 7 },
+    { name: "buildings", id: 7, img: building },
     { name: "places", id: 8 },
   ],
 };

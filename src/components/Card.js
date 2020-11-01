@@ -5,11 +5,11 @@ import React from "react";
 
 // onClick - if isSubjectCard, then click to selectSubject, otherwise, click to select a card for guessing
 
-const Card = ({ isSubjectCard }) => {
+const Card = ({ isSubjectCard, name, img }) => {
   return (
     <div>
-      {/*       {isSubjectCard && <h3>{card.title}</h3>}
-      <i>{card.icon}</i> */}
+      {isSubjectCard && <h3>{name}</h3>}
+      <img style={{ height: 100, width: 100 }} src={img} alt={name} />
     </div>
   );
 };
