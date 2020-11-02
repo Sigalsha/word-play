@@ -3,7 +3,7 @@ import computer from "../assets/computer/pc.png";
 import building from "../assets/buildings/congress.png";
 import clothes from "../assets/clothes/clothes.png";
 import animals from "../assets/animals/bear-face.png";
-import personal from "../assets/personal/heart-necklace.png";
+import personal from "../assets/personal/pearl-necklace.png";
 import household from "../assets/household/wooden-chair.png";
 import body from "../assets/body/strong.png";
 
@@ -15,7 +15,7 @@ export const intro = {
 
 export const selectSubject = {
   header: "Select a subject",
-  subjects: [
+  subjectsList: [
     { name: "animals", id: 1, img: animals },
     { name: "clothes", id: 2, img: clothes },
     { name: "food", id: 3, img: pizza },
