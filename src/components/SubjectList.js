@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import * as constants from "../constants/constants";
+import * as subjects from "../constants/subjects";
 import Card from "./Card";
 
 const SubjectList = (props) => {
-  const { subjectsList } = constants.selectSubject;
+  const { subjectsList } = subjects;
   const [chosenSubject, setSubject] = useState("");
 
   const selectSubject = () => {
