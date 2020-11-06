@@ -18,7 +18,7 @@ import wallet from "../../assets/personal/wallet.png";
 import watch from "../../assets/personal/watch.png";
 import waterBottle from "../../assets/personal/water-bottle.png";
 
-export const personalOptions = [
+export const personal = [
   { name: "earrings", img: earrings, id: uuid() },
   { name: "headphones", img: headphones, id: uuid() },
   { name: "keys", img: keys, id: uuid() },

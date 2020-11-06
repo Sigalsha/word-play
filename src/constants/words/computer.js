@@ -16,7 +16,7 @@ import usb from "../../assets/computer/usb.png";
 import videoConference from "../../assets/computer/video-conference.png";
 import wifiRouter from "../../assets/computer/wifi-router.png";
 
-export const computerOptions = [
+export const computer = [
   { name: "batteries", img: batteries, id: uuid() },
   { name: "button-finger", img: buttonFinger, id: uuid() },
   { name: "camera-icon", img: cameraIcon, id: uuid() },

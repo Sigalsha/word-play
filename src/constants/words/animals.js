@@ -16,7 +16,7 @@ import squid from "../../assets/animals/squid.png";
 import swan from "../../assets/animals/swan.png";
 import turtle from "../../assets/animals/turtle.png";
 
-export const animalsOptions = [
+export const animals = [
   { name: "bat", img: bat, id: uuid() },
   { name: "donkey", img: donkey, id: uuid() },
   { name: "eagle", img: eagle, id: uuid() },

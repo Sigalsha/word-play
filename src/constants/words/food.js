@@ -17,7 +17,7 @@ import pear from "../../assets/food/pear.png";
 import pizza from "../../assets/food/pizza-slice.png";
 import vendingMachine from "../../assets/food/vending-machine.png";
 
-export const foodOptions = [
+export const food = [
   { name: "bread", img: bread, id: uuid() },
   { name: "canned-fish", img: cannedFish, id: uuid() },
   { name: "carrot", img: carrot, id: uuid() },

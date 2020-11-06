@@ -16,7 +16,7 @@ import stairs from "../../assets/buildings/stairs.png";
 import village from "../../assets/buildings/village.png";
 import watchtower from "../../assets/buildings/watchtower.png";
 
-export const buildingsOptions = [
+export const buildings = [
   { name: "ancient-ruins", img: ancientRuins, id: uuid() },
   { name: "bank", img: bank, id: uuid() },
   { name: "barn", img: barn, id: uuid() },

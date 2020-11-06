@@ -17,7 +17,7 @@ import shakingHands from "../../assets/body/shaking-hands.png";
 import teeth from "../../assets/body/teeth.png";
 import worriedEyes from "../../assets/body/worried-eyes.png";
 
-export const bodyOptions = [
+export const body = [
   { name: "body-height", img: bodyHeight, id: uuid() },
   { name: "brain", img: brain, id: uuid() },
   { name: "eyelashes", img: eyelashes, id: uuid() },

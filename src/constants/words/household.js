@@ -16,7 +16,7 @@ import towel from "../../assets/household/towel.png";
 import trashCan from "../../assets/household/trash-can.png";
 import vacuumCleaner from "../../assets/household/vacuum-cleaner.png";
 
-export const householdOptions = [
+export const household = [
   { name: "alarm-clock", img: alarmClock, id: uuid() },
   { name: "bar-stool", img: barStool, id: uuid() },
   { name: "bathtub", img: bathtub, id: uuid() },

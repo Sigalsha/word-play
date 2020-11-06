@@ -16,7 +16,7 @@ import underwearShorts from "../../assets/clothes/underwear-shorts.png";
 import underwear from "../../assets/clothes/underwear.png";
 import zipper from "../../assets/clothes/zipper.png";
 
-export const clothesOptions = [
+export const clothes = [
   { name: "belt", img: belt, id: uuid() },
   { name: "bow-tie", img: bowTie, id: uuid() },
   { name: "dress", img: dress, id: uuid() },
