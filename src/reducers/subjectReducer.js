@@ -10,21 +10,21 @@ import { personal } from "../constants/words/personal";
 export const subjectReducer = (state, action) => {
   switch (action.type) {
     case "ANIMALS":
-      return [...state, animals];
+      return [...state, ...animals];
     case "BODY":
-      return [...state, body];
+      return [...state, ...body];
     case "BUILDINGS":
-      return [...state, buildings];
+      return [...state, ...buildings];
     case "CLOTHES":
-      return [...state, clothes];
+      return [...state, ...clothes];
     case "COMPUTER":
-      return [...state, computer];
+      return [...state, ...computer];
     case "FOOD":
-      return [...state, food];
+      return [...state, ...food];
     case "HOUSEHOLD":
-      return [...state, household];
+      return [...state, ...household];
     case "PERSONAL":
-      return [...state, personal];
+      return [...state, ...personal];
     default:
       return state;
   }

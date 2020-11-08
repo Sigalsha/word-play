@@ -7,7 +7,7 @@ const ScoreContextProvider = (props) => {
   const [score, dispatch] = useReducer(scoreReducer, 0);
 
   return (
-    <ScoreContext.Provider value={(score, dispatch)}>
+    <ScoreContext.Provider value={{ score, dispatch }}>
       {props.children}
     </ScoreContext.Provider>
   );

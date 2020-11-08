@@ -1,21 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import * as subjects from "../constants/subjects";
 import Card from "./Card";
+import { SubjectContext } from "../contexts/SubjectContext";
+import { GameStageContext } from "../contexts/GameStageContext";
 
-const SubjectList = (props) => {
+const SubjectList = () => {
   const { subjectsList } = subjects;
-  const [chosenSubject, setSubject] = useState("");
+  const { chosenSubject, dispatch } = useContext(SubjectContext);
+  const { gameStage, dispatch } = useContext(GameStageContext);
 
-  const selectSubject = () => {
-    setSubject(chosenSubject);
-    props.onClick();
+  const selectSubject = (name) => {
+    console.log(name);
+    let nameType = name.toUpperCase();
+    console.log(nameType);
+    dispatch({ type: nameType });
   };
   return (
     <div className="subject-list">
+      {/*     {chosenSubject.map((word) => {
+        return <li key={word.id}>{word.name}</li>;
+      })} */}
       {
         <ul>
           {subjectsList.map((subject) => {
-            console.log(subject);
+            /*  console.log(subject); */
             return (
               <Card
                 name={subject.name}
