@@ -5,28 +5,29 @@ import PlayGame from "./views/PlayGame";
 import CardContextProvider from "./contexts/CardContext";
 import { useContext, useState } from "react";
 import ScoreContextProvider from "./contexts/ScoreContext";
-import GameStageContextProvider, {
-  GameStageContext,
-} from "./contexts/GameStageContext";
+import { GameStageContext } from "./contexts/GameStageContext";
 
 function App() {
-  const { gameStage, dispatch } = useContext(GameStageContext);
+  const { gameStage } = useContext(GameStageContext);
 
   return (
     <div className="App">
-      <GameStageContextProvider>
-        <Intro />
-        {gameStage === "selectSubject" && (
-          <SelectSubject onClick={() => dispatch({ type: "SELECT_SUBJECT" })} />
-        )}
-        {gameStage === "playGame" && (
-          <ScoreContextProvider>
-            <PlayGame onClick={() => dispatch({ type: "PLAY_GAME" })} />
-          </ScoreContextProvider>
-        )}
-      </GameStageContextProvider>
+      {gameStage}
+      {gameStage === "intro" && <Intro />}
+      {gameStage === "selectSubject" && <SelectSubject />}
+      {gameStage === "playGame" && (
+        <ScoreContextProvider>
+          <PlayGame />
+        </ScoreContextProvider>
+      )}
     </div>
   );
 }
+
+// gameStage === "selectSubject"
+// gameStage === "playGame"
+
+// onClick={() => dispatch({ type: "SELECT_SUBJECT" })}
+// onClick={() => dispatch({ type: "PLAY_GAME" })}
 
 export default App;

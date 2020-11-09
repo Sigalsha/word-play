@@ -1,4 +1,4 @@
-export const gameStageReducer = (state, action) => {
+export const gameStageReducer = (state = "intro", action) => {
   switch (action.type) {
     case "INTRO":
       return (state = "selectSubject");

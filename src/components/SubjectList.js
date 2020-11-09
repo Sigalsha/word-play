@@ -7,7 +7,6 @@ import { GameStageContext } from "../contexts/GameStageContext";
 const SubjectList = () => {
   const { subjectsList } = subjects;
   const { chosenSubject, dispatch } = useContext(SubjectContext);
-  const { gameStage, dispatch } = useContext(GameStageContext);
 
   const selectSubject = (name) => {
     console.log(name);
@@ -17,9 +16,9 @@ const SubjectList = () => {
   };
   return (
     <div className="subject-list">
-      {/*     {chosenSubject.map((word) => {
+      {chosenSubject.map((word) => {
         return <li key={word.id}>{word.name}</li>;
-      })} */}
+      })}
       {
         <ul>
           {subjectsList.map((subject) => {
