@@ -22,7 +22,6 @@ const SubjectList = () => {
       {
         <ul>
           {subjectsList.map((subject) => {
-            /*  console.log(subject); */
             return (
               <Card
                 name={subject.name}

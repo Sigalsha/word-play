@@ -1,42 +1,36 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import * as food from "../constants/words/food";
 import * as personal from "../constants/words/personal";
 import Card from "./Card";
 import { animals } from "../constants/words/animals";
+import { WordContext } from "../contexts/WordContext";
 
 const WordList = () => {
-  const filteredAnimals = [];
-  const arr = [];
+  const { words } = useContext(WordContext);
 
-  while (arr.length < 4) {
-    let randomWordNum = Math.floor(Math.random() * 15);
-    if (!arr.includes(randomWordNum)) {
-      arr.push(randomWordNum);
-    }
-  }
-
-  for (let i in arr) {
-    filteredAnimals.push(animals[arr[i]]);
-  }
-
-  console.log(animals);
-  console.log(arr);
-  console.log(filteredAnimals);
+  console.log(words);
+  console.log(words[0]);
+  console.log(words[2]);
 
   return (
     <div className="word-list">
-      <ul>
-        {filteredAnimals.map((word) => {
-          return (
-            <Card
-              name={word.name}
-              key={word.id}
-              isSubjectCard={false}
-              src={word.img}
-            />
-          );
-        })}
-      </ul>
+      {words.length ? (
+        <ul>
+          {words.map((word) => {
+            console.log("img", word.img);
+            return (
+              <Card
+                name={word.name}
+                key={word.id}
+                isSubjectCard={false}
+                src={word.img}
+              />
+            );
+          })}
+        </ul>
+      ) : (
+        <div>loading... </div>
+      )}
     </div>
   );
 };

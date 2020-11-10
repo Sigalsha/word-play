@@ -6,6 +6,8 @@ import CardContextProvider from "./contexts/CardContext";
 import { useContext, useState } from "react";
 import ScoreContextProvider from "./contexts/ScoreContext";
 import { GameStageContext } from "./contexts/GameStageContext";
+import SubjectContextProvider from "./contexts/SubjectContext";
+import WordContextProvider from "./contexts/WordContext";
 
 function App() {
   const { gameStage } = useContext(GameStageContext);
@@ -14,12 +16,16 @@ function App() {
     <div className="App">
       {gameStage}
       {gameStage === "intro" && <Intro />}
-      {gameStage === "selectSubject" && <SelectSubject />}
-      {gameStage === "playGame" && (
-        <ScoreContextProvider>
-          <PlayGame />
-        </ScoreContextProvider>
-      )}
+      <SubjectContextProvider>
+        {gameStage === "selectSubject" && <SelectSubject />}
+        {gameStage === "playGame" && (
+          <WordContextProvider>
+            <ScoreContextProvider>
+              <PlayGame />
+            </ScoreContextProvider>
+          </WordContextProvider>
+        )}
+      </SubjectContextProvider>
     </div>
   );
 }
