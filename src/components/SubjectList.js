@@ -9,11 +9,10 @@ const SubjectList = () => {
   const { chosenSubject, dispatch } = useContext(SubjectContext);
 
   const selectSubject = (name) => {
-    console.log(name);
     let nameType = name.toUpperCase();
-    console.log(nameType);
     dispatch({ type: nameType });
   };
+
   return (
     <div className="subject-list">
       {chosenSubject.map((word) => {

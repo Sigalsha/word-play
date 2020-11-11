@@ -26,9 +26,9 @@ export const subjectReducer = (state, action) => {
       return [...state, ...household];
     case "PERSONAL":
       return [...state, ...personal];
+    case "RESET_SUBJECT":
+      return [];
     default:
       return state;
   }
-
-  // alternative: return state.filter((subject) => subject.name === "personal");
 };

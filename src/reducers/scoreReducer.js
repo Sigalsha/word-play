@@ -7,6 +7,8 @@ export const scoreReducer = (state, action) => {
         return state;
       }
       return state - 50;
+    case "RESET_SCORE":
+      return (state = 0);
     default:
       return state;
   }

@@ -32,11 +32,9 @@ export const wordReducer = (state, action) => {
 
   switch (action.type) {
     case "GENERATE_WORDS":
-      console.log([
-        ...state,
-        ...filterWordsBySubjectAndIndex(action.chosenSubject),
-      ]);
       return [...state, ...filterWordsBySubjectAndIndex(action.chosenSubject)];
+    case "CORRECT_ANSWER":
+      return [];
     default:
       return state;
   }

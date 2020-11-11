@@ -7,3 +7,7 @@ export const intro = {
 export const selectSubject = {
   header: "Select a subject",
 };
+
+export const playGame = {
+  buttonText: "reset game",
+};
