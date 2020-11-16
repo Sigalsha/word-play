@@ -1,12 +1,3 @@
-import { animals } from "../constants/words/animals";
-import { body } from "../constants/words/body";
-import { buildings } from "../constants/words/buildings";
-import { clothes } from "../constants/words/clothes";
-import { computer } from "../constants/words/computer";
-import { food } from "../constants/words/food";
-import { household } from "../constants/words/household";
-import { personal } from "../constants/words/personal";
-
 export const wordReducer = (state, action) => {
   function filterWordsBySubjectAndIndex(subjectArr) {
     console.log(subjectArr);

@@ -5,16 +5,3 @@ body {
 .App {
   text-align: center;
 }
-
-.app-header {
-  color: #3b054f;
-}
-
-.button {
-  background-color: #ff7200;
-  text-decoration: none;
-  border: transparent;
-  font-size: 28px;
-  height: 50px;
-  width: 200px;
-}

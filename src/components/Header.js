@@ -1,10 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
-// case start game => Welcome to Word Play!
-// case choose a subject => Select A Subject
+const H1Element = styled.h1`
+  letter-spacing: 0.8px;
+  margin: 1em 0 0 0;
+  color: #3b054f;
+  font-size: 60px;
+`;
 
 const Header = ({ headerText }) => {
-  return <h1 className="app-header">{headerText}</h1>;
+  return <H1Element>{headerText}</H1Element>;
 };
 
 export default Header;

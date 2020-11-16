@@ -1,21 +1,28 @@
-import React, { useContext, useState } from "react";
-import * as food from "../constants/words/food";
-import * as personal from "../constants/words/personal";
-import Card from "./Card";
-import { animals } from "../constants/words/animals";
+import React, { useContext, useState, useEffect } from "react";
+import styled from "styled-components";
 import { WordContext } from "../contexts/WordContext";
 import { SubjectContext } from "../contexts/SubjectContext";
 import { ScoreContext } from "../contexts/ScoreContext";
+import { SuccessContext } from "../contexts/SuccessContext";
+import Card from "./Card";
+
+const CardList = styled.ul`
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 40px;
+  flex-flow: row wrap;
+`;
 
 const WordList = ({ wordToGuess }) => {
   const { chosenSubject } = useContext(SubjectContext);
   const { words, dispatch } = useContext(WordContext);
-  const { score, dispatch: scoreDispatch } = useContext(ScoreContext);
-  const [successMsg, setSuccessMsg] = useState("");
+  const { dispatch: scoreDispatch } = useContext(ScoreContext);
+  const { success, onSuccessEnd, onSuccess } = useContext(SuccessContext);
+  const [successMsg, setSuccessMsg] = useState(false);
 
   const selectImage = (imageName) => {
     if (imageName === wordToGuess) {
-      setSuccessMsg("Great!");
+      onSuccess();
       dispatch({ type: "CORRECT_ANSWER" });
       scoreDispatch({ type: "ADD_POINTS" });
       dispatch({ type: "GENERATE_WORDS", chosenSubject });
@@ -25,10 +32,9 @@ const WordList = ({ wordToGuess }) => {
   };
 
   return (
-    <div className="word-list">
-      <h1>{successMsg}</h1>
-      {words.length ? (
-        <ul>
+    <div>
+      {words.length && (
+        <CardList>
           {words.map((word) => {
             return (
               <Card
@@ -40,12 +46,12 @@ const WordList = ({ wordToGuess }) => {
               />
             );
           })}
-        </ul>
-      ) : (
-        <div>loading... </div>
+        </CardList>
       )}
     </div>
   );
 };
 
 export default WordList;
+
+/*  */
