@@ -1,19 +1,23 @@
-import React, { useContext, useState } from "react";
-import * as subjects from "../constants/subjects";
-import Card from "./Card";
-import { SubjectContext } from "../contexts/SubjectContext";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import * as subjects from "../constants/subjects";
+import { SubjectContext } from "../contexts/SubjectContext";
+import Card from "./Card";
 
 const CardList = styled.ul`
   display: flex;
   justify-content: space-evenly;
   margin: 0 40px;
   flex-flow: row wrap;
+  @media (max-width: 480px) {
+    margin: 0 40px 20px 0;
+    padding-bottom: 20px;
+  }
 `;
 
 const SubjectList = () => {
   const { subjectsList } = subjects;
-  const { chosenSubject, dispatch } = useContext(SubjectContext);
+  const { dispatch } = useContext(SubjectContext);
 
   const selectSubject = (name) => {
     let nameType = name.toUpperCase();
@@ -21,9 +25,9 @@ const SubjectList = () => {
   };
 
   return (
-    <div>
-      <CardList>
-        {subjectsList.map((subject) => {
+    <CardList>
+      {subjectsList.length &&
+        subjectsList.map((subject) => {
           return (
             <Card
               name={subject.name}
@@ -34,16 +38,8 @@ const SubjectList = () => {
             />
           );
         })}
-      </CardList>
-    </div>
+    </CardList>
   );
 };
 
 export default SubjectList;
-
-{
-  /*      {chosenSubject.map((word) => {
-        return <li key={word.id}>{word.name}</li>;
-      })}
-      { */
-}

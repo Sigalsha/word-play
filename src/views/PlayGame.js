@@ -1,15 +1,15 @@
 import React, { useContext, useLayoutEffect, useEffect } from "react";
+import styled from "styled-components";
+import * as constants from "../constants/constants";
+import { SubjectContext } from "../contexts/SubjectContext";
+import { WordContext } from "../contexts/WordContext";
+import { GameStageContext } from "../contexts/GameStageContext";
+import { ScoreContext } from "../contexts/ScoreContext";
+import { SuccessContext } from "../contexts/SuccessContext";
 import WordList from "../components/WordList";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Score from "../components/Score";
-import { SubjectContext } from "../contexts/SubjectContext";
-import { WordContext } from "../contexts/WordContext";
-import * as constants from "../constants/constants";
-import { GameStageContext } from "../contexts/GameStageContext";
-import { ScoreContext } from "../contexts/ScoreContext";
-import styled from "styled-components";
-import { SuccessContext } from "../contexts/SuccessContext";
 import Confetti from "../components/Confetti";
 
 const GameWrapper = styled.div`
@@ -22,7 +22,11 @@ const GameWrapper = styled.div`
 const GameFooter = styled.div`
   display: flex;
   justify-content: space-evenly;
-  margin: 5px;
+  margin: 10px 40px;
+
+  @media (max-width: 480px) {
+    margin: 0;
+  }
 `;
 
 const PlayGame = () => {
@@ -60,6 +64,7 @@ const PlayGame = () => {
           <Button
             buttonText={playGame.buttonText}
             onClick={resetGameAndScore}
+            isResetButton={true}
           />
           <Score />
         </GameFooter>

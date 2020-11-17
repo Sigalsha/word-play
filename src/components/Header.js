@@ -6,10 +6,13 @@ const H1Element = styled.h1`
   margin: 1em 0 0 0;
   color: #3b054f;
   font-size: 60px;
+  @media (max-width: 480px) {
+    font-size: ${(props) => (props.isSubjectCard ? "30px" : "40px")};
+  }
 `;
 
-const Header = ({ headerText }) => {
-  return <H1Element>{headerText}</H1Element>;
+const Header = ({ headerText, isSubjectCard }) => {
+  return <H1Element isSubjectCard={isSubjectCard}>{headerText}</H1Element>;
 };
 
 export default Header;

@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import Header from "../components/Header";
-import Button from "../components/Button";
+import styled from "styled-components";
 import * as constants from "../constants/constants";
 import { GameStageContext } from "../contexts/GameStageContext";
-import styled from "styled-components";
+import Header from "../components/Header";
+import Button from "../components/Button";
 
 const IntroWrapper = styled.div`
   height: 400px;
@@ -12,11 +12,19 @@ const IntroWrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+  @media (max-width: 480px) {
+    height: 500px;
+  }
 `;
 
 const Desc = styled.p`
   font-size: 28px;
   margin: 30px 0;
+  @media (max-width: 480px) {
+    font-size: 20px;
+    margin: 40px 15px;
+    line-height: 1.7;
+  }
 `;
 
 const Intro = () => {

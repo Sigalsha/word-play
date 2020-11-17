@@ -12,12 +12,17 @@ const Wrapper = styled.div`
   border-radius: 5px;
   margin-top: 40px;
   background-color: #e12a62;
+
+  @media (max-width: 480px) {
+    font-size: 26px;
+    width: 150px;
+  }
 `;
 
 const Score = () => {
   const { score } = useContext(ScoreContext);
 
-  return <Wrapper>score : {score}</Wrapper>;
+  return <Wrapper>score: {score}</Wrapper>;
 };
 
 export default Score;
