@@ -11,3 +11,8 @@ export const selectSubject = {
 export const playGame = {
   buttonText: "reset game",
 };
+
+export const credit = {
+  text:
+    "All icons copyright belongs to its creators at https://game-icons.net/ ",
+};

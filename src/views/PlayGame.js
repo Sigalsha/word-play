@@ -29,6 +29,18 @@ const GameFooter = styled.div`
   }
 `;
 
+const CreditMsg = styled.div`
+  font-size: 18px;
+  align-items: center;
+  margin-top: 60px;
+  line-height: 1.2;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+`;
+
 const PlayGame = () => {
   const { chosenSubject, dispatch: subjectDispatch } = useContext(
     SubjectContext
@@ -37,7 +49,7 @@ const PlayGame = () => {
   const { dispatch: gameStageDispatch } = useContext(GameStageContext);
   const { dispatch: scoreDispatch } = useContext(ScoreContext);
   const { success, onSuccessEnd } = useContext(SuccessContext);
-  const { playGame } = constants;
+  const { playGame, credit } = constants;
 
   useLayoutEffect(() => {
     dispatch({ type: "GENERATE_WORDS", chosenSubject });
@@ -57,7 +69,9 @@ const PlayGame = () => {
   return (
     <GameWrapper>
       {success && <Confetti height="400px" width="400px" />}
-      {!success && words.length && <Header headerText={words[0].name} />}
+      {!success && words.length && (
+        <Header headerText={words[0].name} isWordHeader={true} />
+      )}
       {!success && words.length && <WordList wordToGuess={words[0].name} />}
       {!success && (
         <GameFooter>
@@ -69,8 +83,14 @@ const PlayGame = () => {
           <Score />
         </GameFooter>
       )}
+      {!success && <CreditMsg>{credit.text}</CreditMsg>}
     </GameWrapper>
   );
 };
 
 export default PlayGame;
+
+/*   @media (max-width: 480px) {
+    font-size: 20px;
+    margin-top: 60px;
+  } */

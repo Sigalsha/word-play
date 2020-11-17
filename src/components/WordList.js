@@ -13,7 +13,7 @@ const CardList = styled.div`
   flex-flow: row wrap;
 
   @media (max-width: 480px) {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 `;
 
