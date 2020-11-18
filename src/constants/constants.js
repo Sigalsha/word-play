@@ -13,6 +13,7 @@ export const playGame = {
 };
 
 export const credit = {
-  text:
-    "All icons copyright belongs to its creators at https://game-icons.net/ ",
+  firstText:
+    "All icons copyright belongs to its creators at https://game-icons.net/ . ",
+  secondText: `'Try Again' animation copyright belongs to Sunny Ghosh at https://lottiefiles.com/user/93406 .`,
 };

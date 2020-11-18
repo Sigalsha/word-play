@@ -8,7 +8,6 @@ import { household } from "../constants/words/household";
 import { personal } from "../constants/words/personal";
 
 export const subjectReducer = (state, action) => {
-  console.log(action.type);
   switch (action.type) {
     case "ANIMALS":
       return [...state, ...animals];

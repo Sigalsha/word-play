@@ -21,7 +21,7 @@ const WordList = ({ wordToGuess }) => {
   const { chosenSubject } = useContext(SubjectContext);
   const { words, dispatch } = useContext(WordContext);
   const { dispatch: scoreDispatch } = useContext(ScoreContext);
-  const { onSuccess } = useContext(SuccessContext);
+  const { isFalseGuess, onSuccess, onFalseGuess } = useContext(SuccessContext);
 
   const selectImage = (imageName) => {
     if (imageName === wordToGuess) {
@@ -30,6 +30,7 @@ const WordList = ({ wordToGuess }) => {
       scoreDispatch({ type: "ADD_POINTS" });
       dispatch({ type: "GENERATE_WORDS", chosenSubject });
     } else {
+      onFalseGuess();
       scoreDispatch({ type: "REDUCE_POINTS" });
     }
   };

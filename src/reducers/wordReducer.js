@@ -1,7 +1,5 @@
 export const wordReducer = (state, action) => {
   function filterWordsBySubjectAndIndex(subjectArr) {
-    console.log(subjectArr);
-
     let filteredWords = [];
     let arr = [];
 
@@ -12,12 +10,9 @@ export const wordReducer = (state, action) => {
       }
     }
 
-    console.log(arr, "after while loop");
-
     for (let i in arr) {
       filteredWords.push(subjectArr[arr[i]]);
     }
-    console.log(filteredWords, "after filter by arr");
     return filteredWords;
   }
 

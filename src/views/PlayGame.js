@@ -11,6 +11,7 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 import Score from "../components/Score";
 import Confetti from "../components/Confetti";
+import TryAgainLottie from "../components/TryAgainLottie";
 
 const GameWrapper = styled.div`
   display: flex;
@@ -36,8 +37,9 @@ const CreditMsg = styled.div`
   line-height: 1.2;
 
   @media (max-width: 480px) {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 30px;
+    overflow-wrap: break-word;
   }
 `;
 
@@ -48,7 +50,9 @@ const PlayGame = () => {
   const { words, dispatch } = useContext(WordContext);
   const { dispatch: gameStageDispatch } = useContext(GameStageContext);
   const { dispatch: scoreDispatch } = useContext(ScoreContext);
-  const { success, onSuccessEnd } = useContext(SuccessContext);
+  const { success, onSuccessEnd, falseGuess, onFalseGuessEnd } = useContext(
+    SuccessContext
+  );
   const { playGame, credit } = constants;
 
   useLayoutEffect(() => {
@@ -60,6 +64,12 @@ const PlayGame = () => {
     return () => clearTimeout(timer);
   }, [success]);
 
+  useEffect(() => {
+    const falseGuessTimer =
+      falseGuess && setTimeout(() => onFalseGuessEnd(), 2000);
+    return () => clearTimeout(falseGuessTimer);
+  }, [falseGuess]);
+
   const resetGameAndScore = () => {
     scoreDispatch({ type: "RESET_SCORE" });
     subjectDispatch({ type: "RESET_SUBJECT" });
@@ -69,6 +79,7 @@ const PlayGame = () => {
   return (
     <GameWrapper>
       {success && <Confetti height="400px" width="400px" />}
+      {falseGuess && <TryAgainLottie />}
       {!success && words.length && (
         <Header headerText={words[0].name} isWordHeader={true} />
       )}
@@ -83,14 +94,15 @@ const PlayGame = () => {
           <Score />
         </GameFooter>
       )}
-      {!success && <CreditMsg>{credit.text}</CreditMsg>}
+      {!success && (
+        <CreditMsg>
+          {credit.firstText}
+          <br />
+          {credit.secondText}
+        </CreditMsg>
+      )}
     </GameWrapper>
   );
 };
 
 export default PlayGame;
-
-/*   @media (max-width: 480px) {
-    font-size: 20px;
-    margin-top: 60px;
-  } */

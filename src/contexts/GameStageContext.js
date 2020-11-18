@@ -5,7 +5,6 @@ export const GameStageContext = createContext();
 
 const GameStageContextProvider = (props) => {
   const [gameStage, dispatch] = useReducer(gameStageReducer, "intro");
-  console.log(gameStage);
 
   return (
     <GameStageContext.Provider value={{ gameStage, dispatch }}>
