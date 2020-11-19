@@ -76,14 +76,22 @@ const PlayGame = () => {
     gameStageDispatch({ type: "PLAY_GAME" });
   };
 
+  const generateRandomWordIndex = () => {
+    return Math.floor(Math.random() * 4);
+  };
+
+  let randomWordNum = generateRandomWordIndex();
+
   return (
     <GameWrapper>
       {success && <Confetti height="400px" width="400px" />}
       {falseGuess && <TryAgainLottie />}
       {!success && words.length && (
-        <Header headerText={words[0].name} isWordHeader={true} />
+        <Header headerText={words[randomWordNum].name} isWordHeader={true} />
       )}
-      {!success && words.length && <WordList wordToGuess={words[0].name} />}
+      {!success && words.length && (
+        <WordList wordToGuess={words[randomWordNum].name} />
+      )}
       {!success && (
         <GameFooter>
           <Button
