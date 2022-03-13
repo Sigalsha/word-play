@@ -1,0 +1,53 @@
+:root {
+  /* Font-Size */
+  --fs-basis: 1em; /*16px*/
+  --fs-basis-s1: 0.9em;
+  --fs-basis-s2: 0.95em;
+  --fs-basis-s3: 0.85em;
+  --fs-basis-s4: 0.8em;
+  --fs-basis-s5: 0.75em;
+
+  --fs-basis-m1: 1.1em;
+  --fs-basis-m2: 1.2em;
+  --fs-basis-m3: 1.5em;
+  --fs-basis-m4: 1.8em;
+  --fs-basis-m5: 1.7em;
+
+  --fs-basis-l1: 2.5em;
+  --fs-basis-l2: 2em;
+  --fs-basis-l3: 3em;
+  --fs-px-9: 9px;
+  --fs-px-11: 11px;
+  --fs-px-12: 12px;
+  --fs-px-14: 14px;
+  --fs-px-15: 15px;
+  --fs-px-24: 24px;
+
+  /* Font-Weight */
+  --fw-bold: 700;
+  --fw-light: 400;
+  --fw-lightest: 300;
+  --fw-medium: 600;
+
+  /* Font-Family */
+  --ff-header: "Acme", sans-serif;
+  --ff-secular: "Secular One", sans-serif;
+  --ff-primary: "Signika Negative", sans-serif;
+
+  /* Letter-Spacing */
+  --ls-normal: "normal";
+  --ls-s1: 0.05em;
+  --ls-s2: 0.07em;
+  --ls-l: 0.12em;
+
+  /* Line-Height */
+  --lh-1-7: 1.7;
+  --lh-1-2: 1.2;
+
+  /* Text-Align */
+  --ta-c: center;
+
+  /* Text-Transform */
+  --tt-up: uppercase;
+  --tt-cap: capitalize;
+}

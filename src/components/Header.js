@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const H1Element = styled.h1`
-  letter-spacing: 0.8px;
-  margin: ${(props) => (props.isWordHeader ? "30px 0 20px 0" : "30px 0 0 0")};
-  color: #3b054f;
-  font-size: 60px;
+  letter-spacing: var(--ls-l);
+  text-transform: var(--tt-up);
+  font-family: var(--ff-header);
+  margin: 5%;
+  color: var(--clr-header);
+  font-size: var(--fs-basis-l1);
   @media (max-width: 480px) {
     font-size: ${(props) => (props.isSubjectCard ? "30px" : "34px")};
     margin: ${(props) => (props.isWordHeader ? "20px 0 0 0" : "30px 0 0 0")};
@@ -21,3 +23,4 @@ const Header = ({ headerText, isSubjectCard, isWordHeader }) => {
 };
 
 export default Header;
+// margin: ${(props) => (props.isWordHeader ? "30px 0 20px 0" : "30px 0 0 0")};

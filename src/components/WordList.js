@@ -7,10 +7,10 @@ import { SuccessContext } from "../contexts/SuccessContext";
 import Card from "./Card";
 
 const CardList = styled.div`
-  display: flex;
-  justify-content: space-evenly;
+  display: var(--flex);
+  justify-content: var(--jc-se);
   margin: 0 40px;
-  flex-flow: row wrap;
+  flex-flow: var(--f-flow-rw);
 
   @media (max-width: 480px) {
     margin: 10px 0;

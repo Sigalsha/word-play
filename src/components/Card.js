@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { GameStageContext } from "../contexts/GameStageContext";
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 200px;
-  align-items: center;
-  padding: 20px;
-  margin: 20px;
+const Wrapper = styled.li`
+  list-style-type: none;
+  width: 20%;
+  padding: 3% 0;
+  display: var(--flex);
+  flex-flow: var(--f-flow-cw);
+  align-items: var(--al-c);
   @media (max-width: 480px) {
     width: 100px;
     height: 100px;
@@ -26,11 +25,11 @@ const Wrapper = styled.div`
 `;
 
 const H3Element = styled.h3`
-  font-size: 26px;
-  color: #3b054f;
-  font-weight: 600;
-  padding: 5px;
-  margin: 5px 0;
+  font-size: var(--fs-basis-m2);
+  letter-spacing: var(--ls-s2);
+  color: var(--clr-header);
+  padding: 2%;
+
   :hover {
     cursor: pointer;
   }
@@ -40,9 +39,9 @@ const H3Element = styled.h3`
 `;
 
 const ImgElement = styled.img`
-  height: 150px;
-  width: 150px;
-  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
   :hover {
     cursor: pointer;
   }

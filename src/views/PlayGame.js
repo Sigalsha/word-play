@@ -14,15 +14,15 @@ import Confetti from "../components/Confetti";
 import TryAgainLottie from "../components/TryAgainLottie";
 
 const GameWrapper = styled.div`
-  display: flex;
+  display: var(--flex);
   flex-direction: column;
   justify-content: center;
   margin: 5px 20px;
 `;
 
 const GameFooter = styled.div`
-  display: flex;
-  justify-content: space-evenly;
+  display: var(--flex);
+  justify-content: var(--jc-se);
   margin: 10px 40px;
 
   @media (max-width: 480px) {
@@ -32,9 +32,9 @@ const GameFooter = styled.div`
 
 const CreditMsg = styled.div`
   font-size: 18px;
-  align-items: center;
+  align-items: var(--al-c);
   margin-top: 60px;
-  line-height: 1.2;
+  line-height: var(--lh-1-2);
 
   @media (max-width: 480px) {
     font-size: 12px;
@@ -44,15 +44,13 @@ const CreditMsg = styled.div`
 `;
 
 const PlayGame = () => {
-  const { chosenSubject, dispatch: subjectDispatch } = useContext(
-    SubjectContext
-  );
+  const { chosenSubject, dispatch: subjectDispatch } =
+    useContext(SubjectContext);
   const { words, dispatch } = useContext(WordContext);
   const { dispatch: gameStageDispatch } = useContext(GameStageContext);
   const { dispatch: scoreDispatch } = useContext(ScoreContext);
-  const { success, onSuccessEnd, falseGuess, onFalseGuessEnd } = useContext(
-    SuccessContext
-  );
+  const { success, onSuccessEnd, falseGuess, onFalseGuessEnd } =
+    useContext(SuccessContext);
   const { playGame, credit } = constants;
 
   useLayoutEffect(() => {

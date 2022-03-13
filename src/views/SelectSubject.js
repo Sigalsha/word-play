@@ -5,9 +5,9 @@ import Header from "../components/Header";
 import SubjectList from "../components/SubjectList.js";
 
 const Wrapper = styled.div`
-  display: flex;
+  display: var(--flex);
   flex-direction: column;
-  align-items: center;
+  align-items: var(--al-c);
   justify-content: center;
 `;
 

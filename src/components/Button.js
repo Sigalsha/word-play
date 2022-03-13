@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const ButtonElement = styled.button`
-  background-color: #ff7200;
+  background-color: var(--clr-btn-back);
   text-decoration: none;
   border: transparent;
   font-size: 32px;
