@@ -5,10 +5,15 @@ import { GameStageContext } from "../contexts/GameStageContext";
 const Wrapper = styled.li`
   list-style-type: none;
   width: 20%;
-  padding: 3% 0;
+  padding: 2%;
+  margin: 1%;
   display: var(--flex);
   flex-flow: var(--f-flow-cw);
   align-items: var(--al-c);
+
+  @media (min-width: 1023px) {
+  }
+
   @media (max-width: 480px) {
     width: 100px;
     height: 100px;
@@ -28,11 +33,16 @@ const H3Element = styled.h3`
   font-size: var(--fs-basis-m2);
   letter-spacing: var(--ls-s2);
   color: var(--clr-header);
-  padding: 2%;
+  padding: 2% 2% 5% 2%;
 
   :hover {
     cursor: pointer;
   }
+
+  @media (min-width: 1023px) {
+    font-size: var(--fs-basis-m5);
+  }
+
   @media (max-width: 480px) {
     font-size: 24px;
   }
@@ -45,6 +55,12 @@ const ImgElement = styled.img`
   :hover {
     cursor: pointer;
   }
+
+  @media (min-width: 1023px) {
+    height: 150px;
+    width: 150px;
+  }
+
   @media (max-width: 480px) {
     height: 120px;
     width: 120px;

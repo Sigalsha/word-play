@@ -31,7 +31,7 @@ const GameFooter = styled.div`
 `;
 
 const CreditMsg = styled.div`
-  font-size: 18px;
+  font-size: var(--fs-basis-s5);
   align-items: var(--al-c);
   margin-top: 60px;
   line-height: var(--lh-1-2);
