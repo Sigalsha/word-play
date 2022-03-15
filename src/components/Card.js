@@ -5,7 +5,7 @@ import { GameStageContext } from "../contexts/GameStageContext";
 const Wrapper = styled.li`
   list-style-type: none;
   width: 20%;
-  padding: 2%;
+  padding: 3% 0;
   margin: 1%;
   display: var(--flex);
   flex-flow: var(--f-flow-cw);
@@ -15,10 +15,7 @@ const Wrapper = styled.li`
   }
 
   @media (max-width: 480px) {
-    width: 100px;
-    height: 100px;
-    margin: 10px 10px 15px 10px;
-    padding: 30px 20px;
+    width: 40%;
 
     :first-child {
       padding-top: ${(props) => (props.isSubjectCard ? "10px" : "20px")};
@@ -30,21 +27,19 @@ const Wrapper = styled.li`
 `;
 
 const H3Element = styled.h3`
-  font-size: var(--fs-basis-m2);
-  letter-spacing: var(--ls-s2);
+  letter-spacing: var(--ls-s1);
   color: var(--clr-header);
   padding: 2% 2% 5% 2%;
+  font-size: var(--fs-basis-m5);
 
   :hover {
     cursor: pointer;
   }
 
   @media (min-width: 1023px) {
-    font-size: var(--fs-basis-m5);
   }
 
   @media (max-width: 480px) {
-    font-size: 24px;
   }
 `;
 
@@ -62,8 +57,8 @@ const ImgElement = styled.img`
   }
 
   @media (max-width: 480px) {
-    height: 120px;
-    width: 120px;
+    height: 85px;
+    width: 85px;
   }
 `;
 

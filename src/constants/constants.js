@@ -1,6 +1,6 @@
 export const intro = {
   header: "Word Play!",
-  desc: "Practice your english vocabulary",
+  desc: "Practice your English vocabulary",
   button: "Start Play"
 };
 

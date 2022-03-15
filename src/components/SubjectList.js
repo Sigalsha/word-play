@@ -5,14 +5,13 @@ import { SubjectContext } from "../contexts/SubjectContext";
 import Card from "./Card";
 
 const CardList = styled.ul`
+  width: var(--w-100);
   display: var(--flex);
   justify-content: var(--jc-se);
   flex-flow: var(--f-flow-rw);
-  gap: 1%;
-  padding: 2%;
+
   @media (max-width: 480px) {
-    margin: 0 40px 20px 0;
-    padding-bottom: 20px;
+    margin-top: 5%;
   }
 `;
 

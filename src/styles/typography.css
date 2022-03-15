@@ -16,6 +16,7 @@
   --fs-basis-l1: 2.5em;
   --fs-basis-l2: 2em;
   --fs-basis-l3: 3em;
+  --fs-basis-l4: 2.2em;
   --fs-px-9: 9px;
   --fs-px-11: 11px;
   --fs-px-12: 12px;
@@ -39,6 +40,7 @@
   --ls-s1: 0.05em;
   --ls-s2: 0.07em;
   --ls-l: 0.12em;
+  --ls-in: inherit;
 
   /* Line-Height */
   --lh-1-7: 1.7;

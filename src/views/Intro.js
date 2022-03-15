@@ -11,16 +11,15 @@ const IntroWrapper = styled.div`
   align-items: var(--al-c);
   flex-flow: var(--f-flow-cw);
   @media (max-width: 480px) {
-    height: 500px;
+    height: 50vh;
+    margin: 25vh 5%;
   }
 `;
 
 const Desc = styled.p`
-  font-size: 28px;
-  margin: 30px 0;
+  font-size: var(--fs-basis-m4);
+  padding: 20% 0 15% 0;
   @media (max-width: 480px) {
-    font-size: 20px;
-    margin: 40px 15px;
     line-height: var(--lh-1-7);
   }
 `;

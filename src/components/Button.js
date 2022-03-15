@@ -5,19 +5,19 @@ const ButtonElement = styled.button`
   background-color: var(--clr-btn-back);
   text-decoration: none;
   border: transparent;
-  font-size: 32px;
+  font-size: ${(props) =>
+    props.isResetButton ? "26px" : "var(--fs-basis-m4)"};
   font-family: inherit;
-  height: 70px;
-  width: 200px;
-  border-radius: 5px;
-  margin-top: 40px;
+  height: ${(props) => (props.isResetButton ? "7vh" : "10vh")};
+  width: ${(props) => (props.isResetButton ? "150px" : "50vw")};
+  border-radius: var(--br-10-px);
+  letter-spacing: var(--ls-in);
+  margin-top: auto;
   :hover {
     cursor: pointer;
   }
 
   @media (max-width: 480px) {
-    font-size: ${(props) => (props.isResetButton ? "26px" : "32px")};
-    width: ${(props) => (props.isResetButton ? "150px" : "200px")};
   }
 `;
 

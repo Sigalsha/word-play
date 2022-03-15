@@ -5,10 +5,15 @@ import Header from "../components/Header";
 import SubjectList from "../components/SubjectList.js";
 
 const Wrapper = styled.div`
+  width: var(--w-100);
   display: var(--flex);
   flex-direction: column;
   align-items: var(--al-c);
   justify-content: center;
+
+  @media (max-width: 480px) {
+    padding: 20% 2%;
+  }
 `;
 
 const SelectSubject = () => {
