@@ -6,7 +6,6 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 
 const IntroWrapper = styled.div`
-  width: var(--w-90);
   display: var(--flex);
   justify-content: center;
   align-items: var(--al-c);
