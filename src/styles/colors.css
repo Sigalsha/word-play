@@ -3,11 +3,11 @@
   --clr-back: rgba(254, 181, 56, 0.5);
 
   /* Headers */
-  --clr-header: #3b054f;
+  --clr-header: rgb(59, 5, 79); /* #3b054f */
 
   /* Button */
   --clr-btn-back: rgb(255, 114, 0);
 
   /* Score */
-  --clr-sc-back: #e12a62;
+  --clr-sc: #e12a62;
 }

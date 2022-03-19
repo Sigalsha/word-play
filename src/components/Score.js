@@ -7,15 +7,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: var(--al-c);
   font-size: 32px;
-  height: 70px;
-  width: 200px;
   border-radius: 5px;
-  margin-top: 40px;
-  background-color: var(--clr-sc-back);
+  border: 0.25em solid rgb(59, 5, 79, 40%);
 
   @media (max-width: 480px) {
-    font-size: 26px;
-    width: 150px;
+    font-size: var(--fs-basis-m4);
+    padding: 2vh 0;
   }
 `;
 

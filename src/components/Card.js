@@ -30,7 +30,7 @@ const H3Element = styled.h3`
   letter-spacing: var(--ls-s1);
   color: var(--clr-header);
   padding: 2% 2% 5% 2%;
-  font-size: var(--fs-basis-m5);
+  font-size: var(--fs-basis-m3b);
 
   :hover {
     cursor: pointer;
@@ -57,8 +57,8 @@ const ImgElement = styled.img`
   }
 
   @media (max-width: 480px) {
-    height: 85px;
-    width: 85px;
+    height: ${(props) => (props.isSubjectCard ? "10vh" : "13vh")};
+    width: ${(props) => (props.isSubjectCard ? "22vw" : "28vw")};
   }
 `;
 
@@ -78,7 +78,7 @@ const Card = ({ isSubjectCard, name, src, onClick }) => {
       isSubjectCard={isSubjectCard}
     >
       {isSubjectCard && <H3Element>{name}</H3Element>}
-      <ImgElement src={src} alt={name} />
+      <ImgElement src={src} alt={name} isSubjectCard={isSubjectCard} />
     </Wrapper>
   );
 };

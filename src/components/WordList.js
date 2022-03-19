@@ -6,14 +6,15 @@ import { ScoreContext } from "../contexts/ScoreContext";
 import { SuccessContext } from "../contexts/SuccessContext";
 import Card from "./Card";
 
-const CardList = styled.div`
+const CardList = styled.ul`
+  width: var(--w-100);
   display: var(--flex);
   justify-content: var(--jc-se);
-  margin: 0 40px;
   flex-flow: var(--f-flow-rw);
 
   @media (max-width: 480px) {
-    margin: 10px 0;
+    margin: 5%;
+    padding-top: 2.5vh;
   }
 `;
 

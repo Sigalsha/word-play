@@ -5,7 +5,7 @@ import logo from "../assets/carrot-logo.png";
 const HeaderWrapper = styled.div`
   display: var(--flex);
   justify-content: ${(props) =>
-    props.isSubjectCard ? "var(--jc-c)" : "var(--jc-sb)"};
+    props.isSubjectCard || props.isWordHeader ? "var(--jc-c)" : "var(--jc-sb)"};
   align-items: var(--al-c);
   width: var(--w-100);
 `;
@@ -17,10 +17,12 @@ const H1Element = styled.h1`
   color: var(--clr-header);
   font-size: ${(props) =>
     props.isSubjectCard || props.isWordHeader
-      ? "var(--fs-basis-l4)"
+      ? "var(--fs-basis-m4)"
       : "var(--fs-basis-l1)"};
-  text-shadow: var(--tsh-1), var(--tsh-1), var(--tsh-1), var(--tsh-1);
-
+  text-shadow: ${(props) =>
+    props.isSubjectCard || props.isWordHeader
+      ? "var(--tsh-1), var(--tsh-1)"
+      : "var(--tsh-1), var(--tsh-1), var(--tsh-1), var(--tsh-1);"};
   @media (min-width: 1023px) {
     margin: 5% 5% 0 2%;
     font-size: var(--fs-basis-l3);

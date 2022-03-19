@@ -14,38 +14,48 @@ import Confetti from "../components/Confetti";
 import TryAgainLottie from "../components/TryAgainLottie";
 
 const GameWrapper = styled.div`
+  width: var(--w-100);
   display: var(--flex);
   flex-direction: column;
+  align-items: var(--al-c);
   justify-content: center;
-  margin: 5px 20px;
 
   @media (max-width: 480px) {
-    padding: 10% 2%;
+    padding: 10vh 2vw 0 2vw;
   }
 `;
 
 const GameFooter = styled.div`
+  width: var(--w-100);
   display: var(--flex);
+  flex-flow: var(--f-flow-rw);
   justify-content: var(--jc-se);
-  margin: 10px 40px;
 
   @media (max-width: 480px) {
-    margin: 0;
+    margin: 5%;
+    padding-top: 5vh;
   }
 `;
 
 const CreditMsg = styled.div`
-  font-size: var(--fs-basis-s5);
+  font-size: var(--fs-basis-s6);
   align-items: var(--al-c);
-  margin-top: 60px;
   line-height: var(--lh-1-2);
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  padding-bottom: 2.5vh;
 
   @media (max-width: 480px) {
-    font-size: 12px;
-    margin-top: 30px;
     overflow-wrap: break-word;
   }
 `;
+/*
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  padding-bottom: 2.5vh;
+*/
 
 const PlayGame = () => {
   const { chosenSubject, dispatch: subjectDispatch } =
@@ -108,7 +118,11 @@ const PlayGame = () => {
         <CreditMsg>
           {credit.firstText}
           <br />
+          {credit.firstLink}
+          <br />
           {credit.secondText}
+          <br />
+          {credit.secondLink}
         </CreditMsg>
       )}
     </GameWrapper>

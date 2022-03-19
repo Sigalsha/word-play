@@ -6,10 +6,10 @@ const ButtonElement = styled.button`
   text-decoration: none;
   border: transparent;
   font-size: ${(props) =>
-    props.isResetButton ? "26px" : "var(--fs-basis-m4)"};
+    props.isResetButton ? "var(--fs-basis-m3)" : "var(--fs-basis-m4)"};
   font-family: inherit;
-  height: ${(props) => (props.isResetButton ? "7vh" : "10vh")};
-  width: ${(props) => (props.isResetButton ? "150px" : "50vw")};
+  height: 10vh;
+  width: ${(props) => (props.isResetButton ? "40vw" : "50vw")};
   border-radius: var(--br-10-px);
   letter-spacing: var(--ls-in);
   margin-top: auto;
@@ -20,6 +20,7 @@ const ButtonElement = styled.button`
   @media (max-width: 480px) {
   }
 `;
+/* ${(props) => (props.isResetButton ? "7vh" : "10vh")}; */
 
 const Button = ({ onClick, buttonText, isResetButton }) => {
   return (
