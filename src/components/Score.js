@@ -6,13 +6,14 @@ const Wrapper = styled.div`
   display: inline-flex;
   justify-content: center;
   align-items: var(--al-c);
-  font-size: 32px;
-  border-radius: 5px;
-  border: 0.25em solid rgb(59, 5, 79, 40%);
+  font-size: var(--fs-basis-m4);
+
+  @media (min-width: 1023px) {
+    letter-spacing: var(--ls-s2);
+  }
 
   @media (max-width: 480px) {
-    font-size: var(--fs-basis-m4);
-    padding: 2vh 0;
+    font-size: var(--fs-basis-m5);
   }
 `;
 

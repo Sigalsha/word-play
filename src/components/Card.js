@@ -46,18 +46,18 @@ const H3Element = styled.h3`
 const ImgElement = styled.img`
   height: 100px;
   width: 100px;
-  border-radius: 10px;
+  border-radius: var(--br-10-px);
   :hover {
     cursor: pointer;
   }
 
   @media (min-width: 1023px) {
-    height: 150px;
-    width: 150px;
+    height: ${(props) => (props.isSubjectCard ? "18vh" : "18vh")};
+    width: ${(props) => (props.isSubjectCard ? "12vw" : "12vw")};
   }
 
   @media (max-width: 480px) {
-    height: ${(props) => (props.isSubjectCard ? "10vh" : "13vh")};
+    height: ${(props) => (props.isSubjectCard ? "var(--h-10-vh)" : "13vh")};
     width: ${(props) => (props.isSubjectCard ? "22vw" : "28vw")};
   }
 `;

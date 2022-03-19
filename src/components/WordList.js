@@ -12,17 +12,21 @@ const CardList = styled.ul`
   justify-content: var(--jc-se);
   flex-flow: var(--f-flow-rw);
 
+  @media (min-width: 1023px) {
+    margin-top: ${(props) => (props.isFalseGuess ? "3vh" : "5vh")};
+  }
+
   @media (max-width: 480px) {
-    margin: 5%;
-    padding-top: 2.5vh;
+    margin: var(--m-5);
+    padding-top: var(--pt-1vh);
   }
 `;
 
-const WordList = ({ wordToGuess }) => {
+const WordList = ({ wordToGuess, isFalseGuess }) => {
   const { chosenSubject } = useContext(SubjectContext);
   const { words, dispatch } = useContext(WordContext);
   const { dispatch: scoreDispatch } = useContext(ScoreContext);
-  const { isFalseGuess, onSuccess, onFalseGuess } = useContext(SuccessContext);
+  const { onSuccess, onFalseGuess } = useContext(SuccessContext);
 
   const selectImage = (imageName) => {
     if (imageName === wordToGuess) {
@@ -37,7 +41,7 @@ const WordList = ({ wordToGuess }) => {
   };
 
   return (
-    <CardList>
+    <CardList isFalseGuess={isFalseGuess}>
       {words.length &&
         words.map((word) => {
           return (

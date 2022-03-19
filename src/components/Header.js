@@ -8,6 +8,11 @@ const HeaderWrapper = styled.div`
     props.isSubjectCard || props.isWordHeader ? "var(--jc-c)" : "var(--jc-sb)"};
   align-items: var(--al-c);
   width: var(--w-100);
+
+  @media (min-width: 1023px) {
+    justify-content: var(--jc-c);
+    margin-top: ${(props) => props.isFalseGuess && "3vh"};
+  }
 `;
 
 const H1Element = styled.h1`
@@ -23,30 +28,29 @@ const H1Element = styled.h1`
     props.isSubjectCard || props.isWordHeader
       ? "var(--tsh-1), var(--tsh-1)"
       : "var(--tsh-1), var(--tsh-1), var(--tsh-1), var(--tsh-1);"};
-  @media (min-width: 1023px) {
-    margin: 5% 5% 0 2%;
-    font-size: var(--fs-basis-l3);
-  }
 
-  @media (max-width: 480px) {
-    /*     font-size: ${(props) => (props.isSubjectCard ? "30px" : "34px")};
-    margin: ${(props) => (props.isWordHeader ? "20px 0 0 0" : "30px 0 0 0")}; */
+  @media (min-width: 1023px) {
+    padding: 2.5vh 2vw 0 2vw;
+    font-size: ${(props) =>
+      props.isSubjectCard || props.isWordHeader
+        ? "var(--fs-basis-l1)"
+        : "var(--fs-basis-l3)"};
   }
 `;
 
 const Img = styled.img`
   height: 85px;
   width: 85px;
-
-  /*   @media (max-width: 480px) {
-    height: 80px;
-    width: 80px;
-  } */
+  transform: rotate(10deg);
 `;
 
-const Header = ({ headerText, isSubjectCard, isWordHeader }) => {
+const Header = ({ headerText, isSubjectCard, isWordHeader, isFalseGuess }) => {
   return (
-    <HeaderWrapper isSubjectCard={isSubjectCard} isWordHeader={isWordHeader}>
+    <HeaderWrapper
+      isSubjectCard={isSubjectCard}
+      isWordHeader={isWordHeader}
+      isFalseGuess={isFalseGuess}
+    >
       {!isWordHeader && !isSubjectCard && <Img src={logo} alt="carrot-logo" />}
       <H1Element isSubjectCard={isSubjectCard} isWordHeader={isWordHeader}>
         {headerText}
@@ -57,5 +61,3 @@ const Header = ({ headerText, isSubjectCard, isWordHeader }) => {
 };
 
 export default Header;
-// margin: ${(props) => (props.isWordHeader ? "30px 0 20px 0" : "30px 0 0 0")};
-//

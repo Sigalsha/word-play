@@ -13,8 +13,5 @@ body {
   font-family: var(--ff-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(
-    rgba(254, 181, 56, 0.5) 2%,
-    rgba(255, 114, 0, 0.6) 70%
-  );
+  background: linear-gradient(var(--clr-back) 2%, var(--clr-back-2) 70%);
 }

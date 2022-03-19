@@ -11,7 +11,7 @@
 * {
   text-decoration: none;
   margin: 0;
-  padding: 0;
+  padding: var(--pd-0);
 }
 
 body {

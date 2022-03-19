@@ -14,14 +14,18 @@ import Confetti from "../components/Confetti";
 import TryAgainLottie from "../components/TryAgainLottie";
 
 const GameWrapper = styled.div`
-  width: var(--w-100);
   display: var(--flex);
   flex-direction: column;
   align-items: var(--al-c);
   justify-content: center;
 
+  @media (min-width: 1023px) {
+    margin: 3%;
+  }
+
   @media (max-width: 480px) {
-    padding: 10vh 2vw 0 2vw;
+    width: var(--w-100);
+    padding: ${(props) => (props.isFalseGuess ? "3vh 2vw" : "10vh 2vw 0 2vw")};
   }
 `;
 
@@ -30,10 +34,15 @@ const GameFooter = styled.div`
   display: var(--flex);
   flex-flow: var(--f-flow-rw);
   justify-content: var(--jc-se);
+  align-items: var(--al-c);
+
+  @media (min-width: 1023px) {
+    margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "10vh")};
+  }
 
   @media (max-width: 480px) {
-    margin: 5%;
-    padding-top: 5vh;
+    margin: var(--m-5);
+    padding-top: var(--pt-1vh);
   }
 `;
 
@@ -50,12 +59,6 @@ const CreditMsg = styled.div`
     overflow-wrap: break-word;
   }
 `;
-/*
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  padding-bottom: 2.5vh;
-*/
 
 const PlayGame = () => {
   const { chosenSubject, dispatch: subjectDispatch } =
@@ -95,17 +98,24 @@ const PlayGame = () => {
   let randomWordNum = generateRandomWordIndex();
 
   return (
-    <GameWrapper>
+    <GameWrapper isFalseGuess={falseGuess}>
       {success && <Confetti height="400px" width="400px" />}
       {falseGuess && <TryAgainLottie />}
       {!success && words.length && (
-        <Header headerText={words[randomWordNum].name} isWordHeader={true} />
+        <Header
+          headerText={words[randomWordNum].name}
+          isWordHeader={true}
+          isFalseGuess={falseGuess}
+        />
       )}
       {!success && words.length && (
-        <WordList wordToGuess={words[randomWordNum].name} />
+        <WordList
+          wordToGuess={words[randomWordNum].name}
+          isFalseGuess={falseGuess}
+        />
       )}
       {!success && (
-        <GameFooter>
+        <GameFooter isFalseGuess={falseGuess}>
           <Button
             buttonText={playGame.buttonText}
             onClick={resetGameAndScore}

@@ -5,13 +5,13 @@ import { SubjectContext } from "../contexts/SubjectContext";
 import Card from "./Card";
 
 const CardList = styled.ul`
-  width: var(--w-100);
   display: var(--flex);
   justify-content: var(--jc-se);
   flex-flow: var(--f-flow-rw);
 
   @media (max-width: 480px) {
     margin-top: 5%;
+    width: var(--w-100);
   }
 `;
 

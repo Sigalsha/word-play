@@ -1,12 +1,13 @@
 :root {
   /* Layouts */
   --clr-back: rgba(254, 181, 56, 0.5);
+  --clr-back-2: rgba(255, 114, 0, 0.6);
 
   /* Headers */
   --clr-header: rgb(59, 5, 79); /* #3b054f */
 
   /* Button */
-  --clr-btn-back: rgb(255, 114, 0);
+  --clr-btn-back: rgba(225, 42, 98, 0.6);
 
   /* Score */
   --clr-sc: #e12a62;
