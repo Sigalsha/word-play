@@ -10,13 +10,14 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: var(--al-c);
   justify-content: center;
+  margin-top: 10vh;
 
   @media (min-width: 1023px) {
     margin-top: 3%;
   }
 
   @media (max-width: 480px) {
-    padding: 10vh 2vw 0 2vw;
+    margin-top: 8vh;
   }
 `;
 

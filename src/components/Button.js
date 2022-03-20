@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const ButtonElement = styled.button`
+  width: ${(props) => (props.isResetButton ? "25vw" : "40vw")};
   height: var(--h-10-vh);
-  width: 50vw;
   margin-top: auto;
   display: var(--in-flex);
   justify-content: var(--jc-c);
@@ -20,8 +20,16 @@ const ButtonElement = styled.button`
     cursor: pointer;
   }
 
-  @media (min-width: 1023px) {
-    width: ${(props) => (props.isResetButton ? "20vw" : "30vw")};
+  @media (max-width: 700px) {
+    width: ${(props) => (props.isResetButton ? "40vw" : "60vw")};
+    font-size: ${(props) =>
+      props.isResetButton ? "var(--fs-basis-m3)" : "var(--fs-basis-m4)"};
+  }
+
+  @media (max-width: 480px) {
+    font-size: ${(props) =>
+      props.isResetButton ? "var(--fs-basis-m5)" : "var(--fs-basis-m4)"};
+    width: ${(props) => (props.isResetButton ? "45vw" : "60vw")};
   }
 `;
 

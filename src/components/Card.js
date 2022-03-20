@@ -36,10 +36,16 @@ const H3Element = styled.h3`
     cursor: pointer;
   }
 
-  @media (min-width: 1023px) {
+  @media (max-width: 700px) {
+    font-size: var(--fs-basis-m1);
+  }
+
+  @media (max-width: 600px) {
+    font-size: var(--fs-basis);
   }
 
   @media (max-width: 480px) {
+    font-size: var(--fs-basis-m3b);
   }
 `;
 
@@ -52,8 +58,17 @@ const ImgElement = styled.img`
   }
 
   @media (min-width: 1023px) {
-    height: ${(props) => (props.isSubjectCard ? "18vh" : "18vh")};
-    width: ${(props) => (props.isSubjectCard ? "12vw" : "12vw")};
+    height: 18vh;
+    width: 12vw;
+  }
+
+  @media (max-width: 700px) {
+    height: 12vh;
+    width: 12vw;
+  }
+
+  @media (max-width: 600px) {
+    height: 10vh;
   }
 
   @media (max-width: 480px) {

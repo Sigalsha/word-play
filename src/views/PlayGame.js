@@ -18,6 +18,7 @@ const GameWrapper = styled.div`
   flex-direction: column;
   align-items: var(--al-c);
   justify-content: center;
+  margin-top: 10vh;
 
   @media (min-width: 1023px) {
     margin: 3%;
@@ -25,7 +26,6 @@ const GameWrapper = styled.div`
 
   @media (max-width: 480px) {
     width: var(--w-100);
-    padding: ${(props) => (props.isFalseGuess ? "3vh 2vw" : "10vh 2vw 0 2vw")};
   }
 `;
 
@@ -35,14 +35,14 @@ const GameFooter = styled.div`
   flex-flow: var(--f-flow-rw);
   justify-content: var(--jc-se);
   align-items: var(--al-c);
+  margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "15vh")};
 
   @media (min-width: 1023px) {
     margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "10vh")};
   }
 
   @media (max-width: 480px) {
-    margin: var(--m-5);
-    padding-top: var(--pt-1vh);
+    margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "10vh")};
   }
 `;
 

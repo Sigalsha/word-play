@@ -7,9 +7,13 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: var(--al-c);
   font-size: var(--fs-basis-m4);
+  letter-spacing: var(--ls-s2);
 
   @media (min-width: 1023px) {
-    letter-spacing: var(--ls-s2);
+  }
+
+  @media (max-width: 700px) {
+    font-size: var(--fs-basis-m3);
   }
 
   @media (max-width: 480px) {

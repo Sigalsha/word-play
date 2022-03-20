@@ -11,9 +11,14 @@ const CardList = styled.ul`
   display: var(--flex);
   justify-content: var(--jc-se);
   flex-flow: var(--f-flow-rw);
+  margin-top: ${(props) => (props.isFalseGuess ? "3%" : "5%")};
 
   @media (min-width: 1023px) {
-    margin-top: ${(props) => (props.isFalseGuess ? "3vh" : "5vh")};
+    margin-top: ${(props) => (props.isFalseGuess ? "2vh" : "5vh")};
+  }
+
+  @media (max-width: 700px) {
+    margin-top: ${(props) => (props.isFalseGuess ? "3%" : "10%")};
   }
 
   @media (max-width: 480px) {

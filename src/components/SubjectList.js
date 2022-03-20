@@ -8,6 +8,7 @@ const CardList = styled.ul`
   display: var(--flex);
   justify-content: var(--jc-se);
   flex-flow: var(--f-flow-rw);
+  margin-top: 3%;
 
   @media (max-width: 480px) {
     margin-top: 5%;

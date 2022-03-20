@@ -4,9 +4,9 @@ import styled from "styled-components";
 import animationData from "../constants/31572-try-again.json";
 
 const TryAgainWrapper = styled.div`
-  padding: var(--pd-0);
-  margin: 0 0 2vh 0;
-  max-height: 20vh;
+  margin: 0;
+  max-height: 18vh;
+  padding-bottom: 15%;
 
   @media (min-width: 1023px) {
     padding-bottom: 5%;
@@ -25,7 +25,7 @@ const defaultOptions = {
 const TryAgainLottie = () => {
   return (
     <TryAgainWrapper>
-      <Lottie options={defaultOptions} height="30%" width="30%" />
+      <Lottie options={defaultOptions} height="25%" width="25%" />
     </TryAgainWrapper>
   );
 };
