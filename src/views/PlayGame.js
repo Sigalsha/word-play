@@ -21,7 +21,7 @@ const GameWrapper = styled.div`
   margin-top: 10vh;
 
   @media (min-width: 1023px) {
-    margin: 3%;
+    margin: 3% 5% 5% 5%;
   }
 
   @media (max-width: 480px) {
@@ -38,11 +38,12 @@ const GameFooter = styled.div`
   margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "15vh")};
 
   @media (min-width: 1023px) {
-    margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "10vh")};
+    margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "15vh")};
+    width: 50%;
   }
 
   @media (max-width: 480px) {
-    margin-top: ${(props) => (props.isFalseGuess ? "5vh" : "10vh")};
+    margin-top: ${(props) => (props.isFalseGuess ? "2vh" : "10vh")};
   }
 `;
 

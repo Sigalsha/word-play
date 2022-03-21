@@ -54,7 +54,7 @@ const H1Element = styled.h1`
     font-size: ${(props) =>
       props.isSubjectCard || props.isWordHeader
         ? "var(--fs-basis-m4)"
-        : "var(--fs-basis-l1)"};
+        : "var(--fs-basis-l2)"};
   }
 `;
 
@@ -62,6 +62,11 @@ const Img = styled.img`
   height: 85px;
   width: 85px;
   transform: rotate(10deg);
+
+  @media (max-width: 480px) {
+    height: 65px;
+    width: 65px;
+  }
 `;
 
 const Header = ({ headerText, isSubjectCard, isWordHeader, isFalseGuess }) => {

@@ -10,6 +10,11 @@ const CardList = styled.ul`
   flex-flow: var(--f-flow-rw);
   margin-top: 3%;
 
+  @media (min-width: 1023px) {
+    margin-top: 2%;
+    width: 90%;
+  }
+
   @media (max-width: 480px) {
     margin-top: 5%;
     width: var(--w-100);

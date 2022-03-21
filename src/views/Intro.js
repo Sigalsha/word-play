@@ -26,7 +26,9 @@ const Desc = styled.p`
   padding: 15% 5%;
 
   @media (min-width: 1023px) {
-    font-size: var(--fs-basis-l2);
+    font-size: var(--fs-basis-m3b);
+    letter-spacing: var(--ls-s2);
+    padding: 5% 0 15% 0;
   }
 
   @media (max-width: 700px) {
@@ -35,6 +37,7 @@ const Desc = styled.p`
 
   @media (max-width: 480px) {
     line-height: var(--lh-1-7);
+    font-size: var(--fs-basis);
   }
 `;
 

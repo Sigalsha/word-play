@@ -20,6 +20,12 @@ const ButtonElement = styled.button`
     cursor: pointer;
   }
 
+  @media (min-width: 1023px) {
+    width: ${(props) => (props.isResetButton ? "30%" : "28vw")};
+    font-size: ${(props) =>
+      props.isResetButton ? "var(--fs-basis-m3b)" : "var(--fs-basis-m4)"};
+  }
+
   @media (max-width: 700px) {
     width: ${(props) => (props.isResetButton ? "40vw" : "60vw")};
     font-size: ${(props) =>
@@ -28,8 +34,11 @@ const ButtonElement = styled.button`
 
   @media (max-width: 480px) {
     font-size: ${(props) =>
-      props.isResetButton ? "var(--fs-basis-m5)" : "var(--fs-basis-m4)"};
+      props.isResetButton ? "var(--fs-basis-m3)" : "var(--fs-basis-m3)"};
     width: ${(props) => (props.isResetButton ? "45vw" : "60vw")};
+    height: ${(props) => (props.isResetButton ? "8vh" : "10vh")};
+    letter-spacing: var(--ls-s2);
+    margin-top: ${(props) => (props.isResetButton ? "0" : "25%")};
   }
 `;
 

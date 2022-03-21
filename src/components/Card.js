@@ -12,6 +12,7 @@ const Wrapper = styled.li`
   align-items: var(--al-c);
 
   @media (min-width: 1023px) {
+    padding: 1% 0;
   }
 
   @media (max-width: 480px) {
@@ -36,6 +37,10 @@ const H3Element = styled.h3`
     cursor: pointer;
   }
 
+  @media (min-width: 1023px) {
+    font-size: var(--fs-basis-m3b);
+  }
+
   @media (max-width: 700px) {
     font-size: var(--fs-basis-m1);
   }
@@ -45,7 +50,7 @@ const H3Element = styled.h3`
   }
 
   @media (max-width: 480px) {
-    font-size: var(--fs-basis-m3b);
+    font-size: var(--fs-basis-m1);
   }
 `;
 
@@ -58,8 +63,8 @@ const ImgElement = styled.img`
   }
 
   @media (min-width: 1023px) {
-    height: 18vh;
-    width: 12vw;
+    height: ${(props) => (props.isSubjectCard ? "70%" : "100%")};
+    width: 50%;
   }
 
   @media (max-width: 700px) {

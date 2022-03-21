@@ -10,6 +10,8 @@ const Wrapper = styled.div`
   letter-spacing: var(--ls-s2);
 
   @media (min-width: 1023px) {
+    font-size: var(--fs-basis-m3b);
+    margin-left: auto;
   }
 
   @media (max-width: 700px) {
@@ -17,7 +19,7 @@ const Wrapper = styled.div`
   }
 
   @media (max-width: 480px) {
-    font-size: var(--fs-basis-m5);
+    font-size: var(--fs-basis-m3);
   }
 `;
 
