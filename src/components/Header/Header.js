@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/carrot-logo.png";
+import logo from "../../assets/carrot-logo.png";
 
 const HeaderWrapper = styled.div`
   display: var(--flex);

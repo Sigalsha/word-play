@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from "react-lottie";
 import styled from "styled-components";
-import animationData from "../constants/31572-try-again.json";
+import animationData from "../../constants/31572-try-again.json";
 
 const TryAgainWrapper = styled.div`
   margin: 0;

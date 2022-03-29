@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { ScoreContext } from "../contexts/ScoreContext";
+import { ScoreContext } from "../../contexts/ScoreContext";
 
 const Wrapper = styled.div`
   display: inline-flex;

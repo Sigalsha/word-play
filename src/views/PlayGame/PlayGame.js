@@ -1,17 +1,17 @@
 import React, { useContext, useLayoutEffect, useEffect } from "react";
 import styled from "styled-components";
-import * as constants from "../constants/constants";
-import { SubjectContext } from "../contexts/SubjectContext";
-import { WordContext } from "../contexts/WordContext";
-import { GameStageContext } from "../contexts/GameStageContext";
-import { ScoreContext } from "../contexts/ScoreContext";
-import { SuccessContext } from "../contexts/SuccessContext";
-import WordList from "../components/WordList";
-import Header from "../components/Header";
-import Button from "../components/Button";
-import Score from "../components/Score";
-import Confetti from "../components/Confetti";
-import TryAgainLottie from "../components/TryAgainLottie";
+import * as constants from "../../constants/constants";
+import { SubjectContext } from "../../contexts/SubjectContext";
+import { WordContext } from "../../contexts/WordContext";
+import { GameStageContext } from "../../contexts/GameStageContext";
+import { ScoreContext } from "../../contexts/ScoreContext";
+import { SuccessContext } from "../../contexts/SuccessContext";
+import WordList from "../../components/WordList";
+import Header from "../../components/Header";
+import Button from "../../components/Button";
+import Score from "../../components/Score";
+import ConfettiWrapper from "../../components/ConfettiWrapper";
+import TryAgainLottie from "../../components/TryAgainLottie";
 
 const GameWrapper = styled.div`
   display: var(--flex);
@@ -100,7 +100,7 @@ const PlayGame = () => {
 
   return (
     <GameWrapper isFalseGuess={falseGuess}>
-      {success && <Confetti height="400px" width="400px" />}
+      {success && <ConfettiWrapper height="400px" width="400px" />}
       {falseGuess && <TryAgainLottie />}
       {!success && words.length && (
         <Header

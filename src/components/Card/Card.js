@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { GameStageContext } from "../contexts/GameStageContext";
+import { GameStageContext } from "../../contexts/GameStageContext";
 
 const Wrapper = styled.li`
   list-style-type: none;

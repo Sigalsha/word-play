@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import * as constants from "../constants/constants";
-import Header from "../components/Header";
-import SubjectList from "../components/SubjectList.js";
+import * as constants from "../../constants/constants";
+import Header from "../../components/Header";
+import SubjectList from "../../components/SubjectList";
 
 const Wrapper = styled.div`
   width: var(--w-100);

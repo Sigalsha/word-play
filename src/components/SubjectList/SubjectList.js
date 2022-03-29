@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import * as subjects from "../constants/subjects";
-import { SubjectContext } from "../contexts/SubjectContext";
-import Card from "./Card";
+import * as subjects from "../../constants/subjects";
+import { SubjectContext } from "../../contexts/SubjectContext";
+import Card from "../Card";
 
 const CardList = styled.ul`
   display: var(--flex);

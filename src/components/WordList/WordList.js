@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
-import { WordContext } from "../contexts/WordContext";
-import { SubjectContext } from "../contexts/SubjectContext";
-import { ScoreContext } from "../contexts/ScoreContext";
-import { SuccessContext } from "../contexts/SuccessContext";
-import Card from "./Card";
+import { WordContext } from "../../contexts/WordContext";
+import { SubjectContext } from "../../contexts/SubjectContext";
+import { ScoreContext } from "../../contexts/ScoreContext";
+import { SuccessContext } from "../../contexts/SuccessContext";
+import Card from "../Card";
 
 const CardList = styled.ul`
   width: var(--w-100);
